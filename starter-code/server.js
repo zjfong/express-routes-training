@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   next();
 // });
 
-// ROUTES
-// Root Route
+
+
 
 
 // Gallery View Route
@@ -32,6 +32,42 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Gallery
 
+var num;
+
+// Root Route
+app.get('/', function (req, res){
+  res.sendFile('views/index.html', { root : __dirname});
+  console.log(__dirname)
+});
+
+// ROUTES
+app.get('/pick-a-number', function (req, res){
+  // console.log(req.query);
+  var pickNumber = req.query.number;
+  var response;
+  if(pickNumber>num){
+    response = "Too High";
+  } else if (pickNumber<num){
+    response = "Too Low";
+  } else {
+    response = "Nailed It";
+  }
+  res.send(response);
+})
+
+app.post('/pick-a-number', function pick(req, res){
+  //console.log('req.body ' + req.body);
+  var newNum = req.body.number;
+  // num = {number: pickNumber};
+  num = newNum;
+  //res.status(200).send('Update Number is ' + num);
+});
+
+
+
+// app.get('/targetnumber', function (req, res){
+//   var targ
+// })
 
 // SERVER START
 var port = 3000;
