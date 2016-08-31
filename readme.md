@@ -1,3 +1,15 @@
+1. Zachary Fong
+2. https://github.com/zjfong/express-routes-training
+3. Completed number guessing game. I had a lot of trouble wrapping my head around not using ajax in the server.js and communicating between front end and back end. Also need to remember the data I'm receiving and sending and in what format it is in.
+
+
+
+
+
+
+
+
+
 #Training: Express Routing Practice
 
 ### Deliverable

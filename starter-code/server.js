@@ -27,11 +27,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Gallery View Route
 
 
-// The Number Guessing Game
+
 
 
 // Gallery
 
+
+// The Number Guessing Game
 var num;
 
 // Root Route
